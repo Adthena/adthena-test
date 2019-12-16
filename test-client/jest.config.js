@@ -6,7 +6,7 @@ module.exports = {
   ],
   verbose: true,
   moduleFileExtensions: [...defaults.moduleFileExtensions, 'es6'],
-  modulePaths: [ '<rootDir>/src'],
+  modulePaths: ['<rootDir>/src'],
   moduleDirectories: [
     ...defaults.moduleDirectories,
     '<rootDir>/node_modules'],
