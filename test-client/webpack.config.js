@@ -11,14 +11,24 @@ function resolvePath(relativePath) {
 
 const PATHS = {
   public: resolvePath('public'),
+  dist: resolvePath('dist'),
+  components: resolvePath('src/components'),
+  services: resolvePath('src/services'),
 };
 
 module.exports = {
   entry: './src/app.js',
   mode: environment,
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      '@components': PATHS.components,
+      '@services': PATHS.services,
+    },
+  },
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: PATHS.dist,
   },
   module: {
     rules: [
@@ -83,7 +93,7 @@ module.exports = {
       filename: 'index.html',
       favicon: './public/favicon.ico',
       env: {
-        environment: environment,
+        environment,
       },
       chunksSortMode: 'none',
     }),

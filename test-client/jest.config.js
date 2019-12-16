@@ -12,6 +12,7 @@ module.exports = {
     '<rootDir>/node_modules'],
   moduleNameMapper: {
     '\\.(sa|sc|c)ss$': 'identity-obj-proxy',
+    '@(components|services)/(.*)$': '<rootDir>/src/$1/$2',
   },
   testPathIgnorePatterns: [
     '/node_modules/',

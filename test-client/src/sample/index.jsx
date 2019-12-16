@@ -1,6 +1,8 @@
 import '../../styles/styles.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Hello from '@components/Hello';
 import dao from '../services/dao';
-import hello from './hello';
 
 /**
  * Start sample application. This is only a sample to demonstrate an api call
@@ -10,10 +12,12 @@ import hello from './hello';
  */
 const start = async (message = 'Adthena') => {
   const json = await dao.GET(`/api/status?message=${message}`);
-  hello.setHelloMessage(json.message);
+  ReactDOM.render(
+    <Hello message={json.message} />,
+    document.getElementById('app'),
+  );
 };
 
 export {
   start,
 };
-

@@ -22,7 +22,7 @@ Adthena Test Client
     nvm use node
     ```
 
-This is a simple client created using vanilla javascript (ECMAScript 6) using babel.
+This is a simple client created using ReactJS in (ECMAScript 6) using babel.
 
 ### How to Run It
 
