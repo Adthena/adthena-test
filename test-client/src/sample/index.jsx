@@ -2,7 +2,7 @@ import '../../styles/styles.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Hello from '@components/Hello';
-import dao from '../services/dao';
+import dao from '@services/dao';
 
 /**
  * Start sample application. This is only a sample to demonstrate an api call

@@ -1,6 +1,6 @@
 const GET = async (options) => {
   const response = await fetch(options);
-  return await response.json();
+  return response.json();
 };
 
 export default {

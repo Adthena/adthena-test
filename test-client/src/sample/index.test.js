@@ -1,7 +1,8 @@
-import dao from '../services/dao';
+import dao from '@services/dao';
 import { start } from './index';
 
-jest.mock('../services/dao');
+jest.mock('@services/dao');
+jest.mock('react-dom');
 
 describe('sample', () => {
   it('should start', async () => {
