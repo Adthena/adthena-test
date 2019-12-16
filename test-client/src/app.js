@@ -1,3 +1,10 @@
-import { start } from './sample';
+import React from 'react';
+import Nav from '@components/Nav';
 
-start().catch((e) => console.error(e));
+const App = () => (
+  <>
+    <Nav />
+  </>
+);
+
+export default App;

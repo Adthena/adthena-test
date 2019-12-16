@@ -17,7 +17,7 @@ const PATHS = {
 };
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/index.jsx',
   mode: environment,
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
