@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import dao from '@services/dao';
 
-const Home = ({ message }) => {
+const TaskTwo = ({ message }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [data, setData] = useState(null);
@@ -22,27 +22,30 @@ const Home = ({ message }) => {
 
   const title = `Hello ${data}!`;
   return (
-    <>
+    <div className="task">
       {hasError && (<h3>Server error...</h3>)}
       {isLoading && (<h3>Loading...</h3>)}
       {data && (
         <>
           <h1>{title}</h1>
           <div>
-            This message was generated using data from the status endpoint.
+            {
+              `As an example of how to make a request to the API, this message was generated 
+              using data from the status endpoint.`
+            }
           </div>
         </>
       )}
-    </>
+    </div>
   );
 };
 
-Home.propTypes = {
+TaskTwo.propTypes = {
   message: PropTypes.string,
 };
 
-Home.defaultProps = {
+TaskTwo.defaultProps = {
   message: 'Adthena',
 };
 
-export default Home;
+export default TaskTwo;
