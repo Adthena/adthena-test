@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import dao from '@services/dao';
 
-const Hello = ({ message }) => {
+const Home = ({ message }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [data, setData] = useState(null);
@@ -18,7 +18,7 @@ const Hello = ({ message }) => {
         setIsLoading(false);
         setHasError(true);
       });
-  }, []);
+  }, [message]);
 
   const title = `Hello ${data}!`;
   return (
@@ -37,8 +37,12 @@ const Hello = ({ message }) => {
   );
 };
 
-Hello.propTypes = {
-  message: PropTypes.string.isRequired,
+Home.propTypes = {
+  message: PropTypes.string,
 };
 
-export default Hello;
+Home.defaultProps = {
+  message: 'Adthena',
+};
+
+export default Home;

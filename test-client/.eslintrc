@@ -42,6 +42,15 @@
     "prefer-arrow-callback": 2,
     "prefer-spread": 2,
     "prefer-template": 2,
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "closingSlash": "never",
+        "beforeSelfClosing": "always",
+        "afterOpening": "never",
+        "beforeClosing": "allow"
+      }
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/button-has-type": [
