@@ -37,12 +37,10 @@ const TaskOne = () => {
       <div className="content">
         <h4>Complete the following task:</h4>
         <p>
-          {
-            `This task is to solve a bug. There is a bug in the LogSelectionButton React Class 
-          Component that is preventing the behaviour described below from working correctly. 
-          Fix the bug.`
-          }
+          This task is to solve a bug. There is a bug in the LogSelectionButton React Class
+          Component that is preventing the behaviour described below from working correctly.
         </p>
+        <p>Fix the bug. </p>
         Expected:
         <ol type="1">
           <li>

@@ -5,7 +5,7 @@ import App from './app';
 
 /**
  * This is a sample application.
- * Feel free to remove this and implement however you wish. Include any npm packages you see fit.
+ * Include any npm packages you see fit.
  * @returns {Promise<void>}
  */
 ReactDOM.render(
