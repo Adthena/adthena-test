@@ -79,7 +79,7 @@ const TaskTwo = ({ message }) => {
                 Give the user the option of a dark theme for the Todos user interface.
               </li>
             </ol>
-            <strong>Feel free to use the component for your implementation.</strong>
+            <strong>Feel free to use this component for your implementation.</strong>
           </div>
         </>
       )}
