@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class LogSelectionButton extends Component {
-  logToConsole = () => {
+  logToConsole = (animal) => {
     const { selected } = this.props;
-    console.log(`You clicked: ${selected}`);
+    console.log(`You clicked: ${animal}`);
   };
 
   handleClick = () => {
-    setTimeout(() => this.logToConsole(), 5000);
+    const { selected } = this.props;
+    setTimeout(() => this.logToConsole(selected), 5000);
   };
 
   render() {
     return (
       <button
         type="button"
-        onClick={this.handleClick}
+        onClick={this.handleClick()}
       >
         <span> Log my click to console</span>
       </button>
