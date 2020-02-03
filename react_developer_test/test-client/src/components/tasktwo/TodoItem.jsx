@@ -1,12 +1,18 @@
 
 import React from 'react';
+import PropTypes from 'prop-types'
+import './TodoItem.css'
 
 const TodoItem = (props) => {
     return (
-        <li className={!props.complete ? 'todo' : ''}>
+        <li className={!props.completed ? 'todo' : ''}>
             {props.title}
-            {props.userId}
         </li>)
+};
+
+TodoItem.PropTypes = {
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired
 };
 
 export default TodoItem;
