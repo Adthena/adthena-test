@@ -8,10 +8,11 @@ const UserInfo = (props) => {
                     <div className="user-info" >
 
                         <div>{user[0].name}</div>
+                        <div>{user[0].email}</div>
                         <div>{user[0].website}</div>
                     </div>}
             </div>)
-        else return <div>User NotFound</div>
+        else return <div className="user-info">User NotFound</div>
     }
     else return '';
     // else if (user && user.length < 0) return 'User not found';

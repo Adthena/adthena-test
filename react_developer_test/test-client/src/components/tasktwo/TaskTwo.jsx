@@ -5,7 +5,8 @@ import useFetch from '../useFetch';
 import DarkModeSwitch from './DarkModeSwitch'
 import UserInfo from './UserInfo'
 import { ThemeContext } from './ThemeContext';
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
+import "./TaskTwo.css";
 
 
 const TaskTwo = () => {
@@ -40,10 +41,10 @@ const TaskTwo = () => {
     <ThemeContext.Provider value={{ mode, 'toggleMode': setMode }} >
       <GlobalStyle />
       <DarkModeSwitch />
-      {user && < UserInfo user={user} />}
-      <div className="task">
+      <div className="task-two">
         <div className="content">
           <UserSearch handleSearch={handleSearch} error={errorSearchUser} />
+          {user && < UserInfo user={user} />}
           {todos && <TodoList todos={todos} error={errorSearchTodos} />}
         </div>
       </div>

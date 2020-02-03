@@ -1,0 +1,21 @@
+button {
+  right: 0;
+  margin: 10px;
+  position: absolute;
+}
+
+input,
+.user-info,
+.todo-list {
+  width: 40%;
+  height: 2;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.content {
+  margin-top: 40px;
+}
