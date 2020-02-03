@@ -6,8 +6,8 @@ const UserSearch = (props) => {
     return (
         <form
             onSubmit={e => {
-                e.preventDefault()
-                props.handleSearch(value)
+                e.preventDefault();
+                props.handleSearch(value);
                 setValue('')
             }}
         >

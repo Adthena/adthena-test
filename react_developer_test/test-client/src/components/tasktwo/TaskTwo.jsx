@@ -4,21 +4,24 @@ import UserSearch from './UserSearch';
 import useFetch from '../useFetch';
 
 const TaskTwo = () => {
-  const [user, setUser] = useState(null);
-  const [url, setUrl] = useState(null);
-  const [todos, error] = useFetch(url);
+  const [userName, setUserName] = useState(null);
+  const [userId, setUserId] = useState(null);
+  const [user, errorSearchUser] = useFetch(`https://jsonplaceholder.typicode.com/users?username=${userName}`);
+  const [todos, errorSearchTodos] = useFetch(`https://jsonplaceholder.typicode.com/todos?userId=${userId}`);
+
+
 
   const handleSearch = (value) => {
-    //handle valid user id/name ?
-    setUser(value);
+    // @TODO handle valid user id/name ?
+    setUserName(value);
   }
 
-
   useEffect(() => {
-    if (user) {
-      setUrl(`https://jsonplaceholder.typicode.com/todos?userId=${user}`);
+    if (user && user.length) {
+      setUserId(user[0].id)
     }
   }, [user]);
+
 
 
   return (
