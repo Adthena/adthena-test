@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import TodoList from './TodoList';
-import UserSearch from './UserSearch';
-import useFetch from '../useFetch';
-import DarkModeSwitch from './DarkModeSwitch'
-import UserInfo from './UserInfo'
-import { ThemeContext } from './ThemeContext';
+import TodoList from './components/TodoList';
+import UserSearch from './components/UserSearch';
+import useFetch from './hooks/useFetch';
+import DarkModeSwitch from './components/DarkModeSwitch'
+import UserInfo from './components/UserInfo'
+import { ThemeContext } from './components/ThemeContext';
 import { createGlobalStyle } from 'styled-components';
-import "./TaskTwo.css";
+import "./css/TaskTwo.css";
 
 
 const TaskTwo = () => {

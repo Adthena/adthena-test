@@ -1,7 +1,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types'
-import './TodoItem.css'
 
 const TodoItem = (props) => {
     return (
@@ -10,7 +9,7 @@ const TodoItem = (props) => {
         </li>)
 };
 
-TodoItem.PropTypes = {
+TodoItem.propTypes = {
     title: PropTypes.string.isRequired,
     completed: PropTypes.bool.isRequired
 };

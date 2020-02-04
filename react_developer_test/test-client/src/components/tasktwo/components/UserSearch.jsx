@@ -10,7 +10,7 @@ const UserSearch = (props) => {
                 onSubmit={e => {
                     e.preventDefault();
                     props.handleSearch(value);
-                    setTimeout(setValue(''), 3000);
+                    setValue('')
                 }}
             >
                 <input

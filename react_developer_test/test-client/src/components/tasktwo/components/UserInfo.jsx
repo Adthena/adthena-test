@@ -1,4 +1,5 @@
-import React from 'React'
+import React from 'React';
+
 const UserInfo = (props) => {
     const user = props.user;
     if (user) {
@@ -12,9 +13,8 @@ const UserInfo = (props) => {
                         <div>{user[0].website}</div>
                     </div>}
             </div>)
-        else return <div className="user-info">User NotFound</div>
+        else return <div className="user-info">User not found</div>
     }
     else return '';
-    // else if (user && user.length < 0) return 'User not found';
 }
 export default UserInfo;

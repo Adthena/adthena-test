@@ -19,3 +19,15 @@ input,
 .content {
   margin-top: 40px;
 }
+
+.todo-list li {
+  margin-top: 10px;
+}
+
+.todo {
+  text-decoration: line-through;
+}
+
+.todo-item {
+  margin-top: 15px;
+}
