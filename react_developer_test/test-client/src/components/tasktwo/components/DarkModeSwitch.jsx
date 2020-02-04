@@ -3,7 +3,7 @@ import { ThemeContext } from './ThemeContext';
 
 const DarkModeSwitch = () => {
     const { mode, toggleMode } = useContext(ThemeContext);
-    return (<button
+    return (<button className="toggle-mode"
         onClick={e => {
             debugger;
             toggleMode(
@@ -14,7 +14,7 @@ const DarkModeSwitch = () => {
         }
         }
     >
-        Toggle Mode
+        Toggle Dark Mode
         </button>
     )
 

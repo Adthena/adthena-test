@@ -1,4 +1,4 @@
-button {
+.toggle-mode {
   right: 0;
   margin: 10px;
   position: absolute;
@@ -16,7 +16,7 @@ input,
   margin-top: 50px;
 }
 
-.content {
+.task-two .content {
   margin-top: 40px;
 }
 
