@@ -23,7 +23,7 @@ const UserSearch = (props) => {
                     disabled={props.disabled}
                 />
             </form>
-            {props.errorMessage && <div class="error-message">{props.errorMessage}</div>}
+            {props.error && <div className="error-message">Error fetching data</div>}
         </div>)
 }
 

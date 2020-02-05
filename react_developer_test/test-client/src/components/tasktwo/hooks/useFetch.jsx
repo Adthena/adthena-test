@@ -12,6 +12,7 @@ const useFetch = (url, paramName) => {
                 if (param !== "null") {
                     setLoading(true);
                     const response = await fetch(url);
+                    console.log(response);
                     if (!response.ok) {
                         throw response;
                     }
@@ -24,6 +25,8 @@ const useFetch = (url, paramName) => {
             }
             catch (error) {
                 setError(error);
+                console.log(error);
+                setLoading(false);
             };
         })();
     }, [url]);

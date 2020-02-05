@@ -6,7 +6,8 @@
 
 input,
 .user-info,
-.todo-list {
+.todo-list,
+.error-message {
   width: 40%;
   height: 2;
   height: 30px;
