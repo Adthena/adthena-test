@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Fragment>
+  <div
+    className="todo-list"
+  >
+    <TodoItem
+      completed={false}
+      id={1}
+      key="1"
+      title="delectus aut autem"
+      userId={1}
+    />
+    <TodoItem
+      completed={false}
+      id={2}
+      key="2"
+      title="delectus aut autem"
+      userId={1}
+    />
+  </div>
+  <Loader
+    color="#000000"
+    css=""
+    loading={true}
+    size={150}
+  />
+</Fragment>
+`;

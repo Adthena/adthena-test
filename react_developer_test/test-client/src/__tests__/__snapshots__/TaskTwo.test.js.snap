@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <button
+    class="toggle-mode"
+  >
+    Toggle Dark Mode
+  </button>,
+  <div
+    class="task-two"
+  >
+    <div
+      class="content"
+    >
+      <div>
+        <form>
+          <input
+            class="user-search"
+            placeholder="search for a user tolist..."
+            type="text"
+            value=""
+          />
+        </form>
+      </div>
+      <div />
+      <div
+        class="todo-list"
+      />
+    </div>
+  </div>,
+]
+`;
