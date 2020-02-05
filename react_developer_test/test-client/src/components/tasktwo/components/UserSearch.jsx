@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+
 const UserSearch = (props) => {
     const [value, setValue] = useState('');
     return (
@@ -19,6 +20,7 @@ const UserSearch = (props) => {
                     value={value}
                     onChange={e => setValue(e.target.value)}
                     placeholder="search for a user tolist..."
+                    disabled={props.disabled}
                 />
             </form>
             {props.errorMessage && <div class="error-message">{props.errorMessage}</div>}

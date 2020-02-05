@@ -12,8 +12,8 @@ import "./css/TaskTwo.css";
 const TaskTwo = () => {
   const [userName, setUserName] = useState(null);
   const [userId, setUserId] = useState(null);
-  const [user, errorSearchUser] = useFetch(`https://jsonplaceholder.typicode.com/users?username=${userName}`, "username");
-  const [todos, errorSearchTodos] = useFetch(`https://jsonplaceholder.typicode.com/todos?userId=${userId}`, "userId");
+  const [user, errorSearchUser, loadingUser] = useFetch(`https://jsonplaceholder.typicode.com/users?username=${userName}`, "username");
+  const [todos, errorSearchTodos, loadingTodos] = useFetch(`https://jsonplaceholder.typicode.com/todos?userId=${userId}`, "userId");
   const [mode, setMode] = useState('light')
 
 
@@ -21,6 +21,11 @@ const TaskTwo = () => {
   body {
     background: ${mode === 'dark' ? 'black' : 'white'};
     color: ${mode === 'dark' ? 'white' : 'black'};
+    div[class*='css-']{
+      border-color: ${mode === 'dark' ? 'white' : 'black'};
+      display: block !important;
+      margin: 0 auto !important;
+    }
   }
 `
 
@@ -43,9 +48,9 @@ const TaskTwo = () => {
       <DarkModeSwitch />
       <div className="task-two">
         <div className="content">
-          <UserSearch handleSearch={handleSearch} error={errorSearchUser} />
-          {user && < UserInfo user={user} />}
-          {todos && <TodoList todos={todos} error={errorSearchTodos} />}
+          <UserSearch handleSearch={handleSearch} error={errorSearchUser} disabled={loadingUser} />
+          <UserInfo user={user} loading={loadingUser} />
+          <TodoList todos={todos} error={errorSearchTodos} loading={loadingTodos} />
         </div>
       </div>
     </ThemeContext.Provider>

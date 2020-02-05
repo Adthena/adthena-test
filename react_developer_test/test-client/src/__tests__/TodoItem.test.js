@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from "enzyme";
-import TodoItem from '../components/tasktwo/TodoItem';
+import TodoItem from '../components/tasktwo/components/TodoItem';
 
 it('renders correctly', () => {
     const rendered = render(<TodoItem />)
