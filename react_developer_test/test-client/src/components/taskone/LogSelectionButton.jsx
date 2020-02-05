@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class LogSelectionButton extends Component {
-  logToConsole = (animal) => {
-    const { selected } = this.props;
-    console.log(`You clicked: ${animal}`);
+  logToConsole = (selected) => {
+    console.log(`You clicked: ${selected}`);
   };
 
   handleClick = () => {
@@ -16,7 +15,7 @@ class LogSelectionButton extends Component {
     return (
       <button
         type="button"
-        onClick={this.handleClick()}
+        onClick={this.handleClick}
       >
         <span> Log my click to console</span>
       </button>
