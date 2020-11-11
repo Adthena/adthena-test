@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+
+  db:
+    image: library/postgres:9.6-alpine
+    restart: always
+    volumes:
+      - ./.docker/tickitdb:/data
+    environment:
+      POSTGRES_PASSWORD: demopassword
+      POSTGRES_USER: demouser
+      POSTGRES_DB: demo
+    ports:
+      - 5432:5432
+
+  southern-blue-ringed-octopus:
+    build:
+      context: southern-blue-ringed-octopus
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8880:8080
+      - 8881:8081
+
+  marru-orthocanna:
+    build:
+      context: marrus-orthocanna
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:5000
