@@ -1,3 +1,7 @@
+# Note
+
+If you have any issues setting up any part of our test, please let us know so that we can assist.
+
 # Prerequisites
 
 Requires `docker engine 19.03.0+`.
