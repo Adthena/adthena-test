@@ -102,4 +102,4 @@ yarn-error.log*
 /**/node_modules
 /**/target
 
-/southern-blue-ringed-octopus/src/main/resources/config.yml
+/test-api/src/main/resources/config.yml

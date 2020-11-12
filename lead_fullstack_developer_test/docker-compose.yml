@@ -14,9 +14,9 @@ services:
     ports:
       - 5432:5432
 
-  southern-blue-ringed-octopus:
+  test-api:
     build:
-      context: southern-blue-ringed-octopus
+      context: test-api
       dockerfile: Dockerfile
     restart: always
     ports:
