@@ -18,7 +18,7 @@ See Instruction for docker compose on linux here:
 
 https://docs.docker.com/compose/install/
 
-## Using `docker-compose`.
+## Setting up the test environment with `docker-compose`
 
 Once you have installed Docker and Docker Compose, you can go in to the root of the repo and run the following commands in your terminal:
 
