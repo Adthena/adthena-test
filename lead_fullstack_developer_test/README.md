@@ -16,6 +16,8 @@ https://docs.docker.com/compose/install/
 
 ## Using `docker-compose`.
 
+Once you have installed Docker and Docker Compose, you can go in to the root of the repo and run the following commands:
+
 ### Building
 
 run `docker-compose build`.
