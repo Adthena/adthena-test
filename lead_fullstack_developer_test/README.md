@@ -34,4 +34,30 @@ Once you have installed Docker and Docker Compose, you can go in to the root of 
 
 Any change to the code will need to be rebuild the docker containers being either frontend or backend.
 
+### Technical Assignment
 
+In this repository you will find a skeleton Events ticketing project with a React.js client, a Dropwizard API and a Dockerised Postgresql database. 
+Your tasks will be to improve upon an existing feature and to implement a new feature.
+Provide your best solution and make use of appropriate React, Javascript and Java concepts to optimise and improve the codebase.
+
+### Task One - Improve Feature
+
+This task is to improve existing features and to make any relevant changes to the codebase.
+
+Expected:
+
+
+1. Add a Cancel button to the Category edit tab, next to the Submit button, returning to the create Category state.
+2. Ensure that the Categories list is updated on Category change.
+3. Create an Event named “Metal Festival” at Venue “General Motors Place” for next Sunday in a new Category called “Melodic Death Metal”.
+
+### Task Two - Implement new feature
+
+This task is to implement a new feature, creating a new endpoint and displaying the result in the placeholder at the bottom of the page. 
+The design can be seen below and it is also included in the repository provided in path: ./task_2_design/design.jpeg.
+
+Expected:
+
+1. Display all details about the most recent event that has the highest number of buyers.
+
+![](task_2_design/design.jpeg)
