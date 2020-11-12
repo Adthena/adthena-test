@@ -34,7 +34,7 @@ Once you have installed Docker and Docker Compose, you can go in to the root of 
 
 Any change to the code will need to be rebuild the docker containers being either frontend or backend.
 
-### Technical Assignment
+## Technical Assignment
 
 In this repository you will find a skeleton Events ticketing project with a React.js client, a Dropwizard API and a Dockerised Postgresql database. 
 Your tasks will be to improve upon an existing feature and to implement a new feature.
