@@ -21,18 +21,4 @@ run `docker-compose up`.
 
 Any change to the code will need to be rebuild being either frontend or backend.
 
-## Without `docker-compose`
 
-### Building
-
-Run `mvn clean install` for building `southern-blue-ringed-octopus`.
-
-### Running
-
-Create a `config.yml` based on `southern-blue-ringed-octopus/src/main/resources/config.yml.dist`.
-Start the backend server using `java -jar southern-blue-ringed-octopus.jar path/to/config.yml`.
-While developing, the frontend can be started using `npm start`.
-
-#### database
-
-The project uses `PostgreSQL`. If ran outside `docker-compose`, the `PostgreSQL` instance should be listening to `5432` on `localhost`.
