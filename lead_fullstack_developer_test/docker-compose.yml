@@ -14,18 +14,18 @@ services:
     ports:
       - 5432:5432
 
-  southern-blue-ringed-octopus:
+  test-api:
     build:
-      context: southern-blue-ringed-octopus
+      context: test-api
       dockerfile: Dockerfile
     restart: always
     ports:
       - 8880:8080
       - 8881:8081
 
-  marru-orthocanna:
+  test-client:
     build:
-      context: marrus-orthocanna
+      context: test-client
       dockerfile: Dockerfile
     restart: always
     ports:
