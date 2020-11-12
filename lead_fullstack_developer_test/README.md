@@ -24,11 +24,11 @@ Once you have installed Docker and Docker Compose, you can go in to the root of 
 
 ### Building
 
-run `docker-compose build`.
+run `docker-compose build .`
 
 ### Running
 
-run `docker-compose up`.
+run `docker-compose up .`
 
 ### Notes
 
