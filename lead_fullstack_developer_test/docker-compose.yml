@@ -23,9 +23,9 @@ services:
       - 8880:8080
       - 8881:8081
 
-  marru-orthocanna:
+  test-client:
     build:
-      context: marrus-orthocanna
+      context: test-client
       dockerfile: Dockerfile
     restart: always
     ports:
