@@ -36,7 +36,8 @@ Any change to the code will require a rebuild of the docker containers being eit
 
 ## Technical Assignment
 
-In this repository you will find a skeleton Events ticketing project with a React.js client, a Dropwizard API and a Dockerised Postgresql database. 
+In this assignment you will find a skeleton Events ticketing project with a React.js client, a Dropwizard API that communicate with a Postgresql database. 
+The environment has been Dockerised to make it easy for you to set up.
 Your tasks will be to improve upon an existing feature and to implement a new feature.
 Provide your best solution and make use of appropriate React, Javascript and Java concepts to optimise and improve the codebase.
 
