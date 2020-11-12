@@ -12,7 +12,7 @@ Docker Windows Install: https://hub.docker.com/editions/community/docker-ce-desk
 
 Docker Linux Install. Follow instruction for your dist: https://docs.docker.com/engine/install/
 
-Note. Docker for Windows and Mac, includes docker compose, however on linux versions, you may need to install it serperately.
+Note. Docker for Windows and Mac, includes docker compose, however on linux versions, you may need to install it seperately.
 
 See Instruction for docker compose on linux here:
 
