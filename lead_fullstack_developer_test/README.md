@@ -2,7 +2,6 @@
 
 Requires `docker engine 19.03.0+`.
 
-# ToBeNamed
 
 ## Using `docker-compose`.
 
