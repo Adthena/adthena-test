@@ -10,7 +10,7 @@ Docker Mac Install: https://hub.docker.com/editions/community/docker-ce-desktop-
 
 Docker Windows Install: https://hub.docker.com/editions/community/docker-ce-desktop-windows/
 
-Docker install Linux. Follow instruction for your dist: https://docs.docker.com/engine/install/
+Docker Linux Install. Follow instruction for your dist: https://docs.docker.com/engine/install/
 
 Note. Docker for Windows and Mac, includes docker compose, however on linux versions, you may need to install it serperately.
 
@@ -32,7 +32,7 @@ Once you have installed Docker and Docker Compose, you can go in to the root of 
 
 ### Notes
 
-Any change to the code will need to be rebuild the docker containers being either frontend or backend.
+Any change to the code will require a rebuild of the docker containers being either frontend or backend.
 
 ## Technical Assignment
 
