@@ -12,35 +12,55 @@ Docker Windows Install: https://hub.docker.com/editions/community/docker-ce-desk
 
 Docker Linux Install, follow instructions for your dist: https://docs.docker.com/engine/install/
 
-Note. Docker for Windows and Mac, includes docker compose, however on linux versions, you may need to install it separately.
+## Setting up the test environment
 
-See instructions for docker compose on linux here:
+### Before starting the stack
 
-https://docs.docker.com/compose/install/
+Requires `java 8+`, `maven 3.6+` and `node 13+`.
+Every command assume you are running them from the project root, either in linux or macOS.
 
-## Setting up the test environment with `docker-compose`
+Using `test-api/src/main/resources/config.yml.dist`, create your own configuration for `test-api`.
+The following instructions assume that you're using this configuration and that it's stored in `test-api/src/main/resources/config.yml`.
+```yaml
+database:
+  # ---
+  user: demouser
+  password: demopassword
+  url: jdbc:postgresql://localhost:5432/demo
+  # ---
+```
 
-Once you have installed Docker and Docker Compose, you can go in to the root of the repo and run the following commands in your terminal:
+Run `cd test-client; npm install`.
+Run `cd test-api; mvn clean install`.
 
-### Building
+### running the stack
 
-`docker-compose build .`
+#### PostgreSQL
 
-### Running
+Start PostgreSQL using `start_db.sh` or by running
+```shell script
+docker run -p 5432:5432 \
+          -e POSTGRES_PASSWORD=demopassword \
+          -e POSTGRES_USER=demouser \
+          -e POSTGRES_DB=demo \
+          -v /<absolute path to>/.docker/tickitdb:/data \
+          library/postgres:9.6-alpine
+```
 
-`docker-compose up .`
+#### test-api
 
-* The application Client will be accessible on http://localhost:8080/
-* The application API will be accessible on http://localhost:8880/
+Once PostgreSQL is running, start `test-api` using `cd test-api; java -jar target/test-api.jar server src/main/resources/config.yml`.
+Every new build of `test-api` will require a restart of `test-api`.
 
-### Notes
+#### test-client
 
-Any change to the code will require a rebuild of the docker containers being either frontend or backend.
+Start the client app using `cd test-client; npm start`.
+The client app will be available on `http://localhost:3000/`.
 
 ## Technical Assignment
 
 In this assignment you will find a skeleton Events ticketing project with a React.js client, a Dropwizard API that communicate with a Postgresql database. 
-The environment has been Dockerised to make it easy for you to set up.
+The db has been Dockerised to make it easy for you to set up.
 Your tasks will be to improve upon an existing feature and to implement a new feature.
 Provide your best solution and make use of appropriate React, Javascript and Java concepts to optimise and improve the codebase.
 
