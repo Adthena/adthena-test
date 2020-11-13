@@ -30,6 +30,8 @@ Once you have installed Docker and Docker Compose, you can go in to the root of 
 
 `docker-compose up .`
 
+The application will be accessible on http://localhost:8080/
+
 ### Notes
 
 Any change to the code will require a rebuild of the docker containers being either frontend or backend.
