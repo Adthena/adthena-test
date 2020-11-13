@@ -30,7 +30,8 @@ Once you have installed Docker and Docker Compose, you can go in to the root of 
 
 `docker-compose up .`
 
-The application will be accessible on http://localhost:8080/
+The application Client will be accessible on http://localhost:8080/
+The application API will be accessible on http://localhost:8880/
 
 ### Notes
 
