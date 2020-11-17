@@ -19,17 +19,6 @@ Docker Linux Install, follow instructions for your dist: https://docs.docker.com
 Requires `java 8+`, `maven 3.6+` and `node 13+`.
 Every command assume you are running them from the project root, either in linux or macOS.
 
-Using `test-api/src/main/resources/config.yml.dist`, create your own configuration for `test-api`.
-The following instructions assume that you're using this configuration and that it's stored in `test-api/src/main/resources/config.yml`.
-```yaml
-database:
-  # ---
-  user: demouser
-  password: demopassword
-  url: jdbc:postgresql://localhost:5432/demo
-  # ---
-```
-
 Run `cd test-client; npm install`.
 Run `cd test-api; mvn clean install`.
 
