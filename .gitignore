@@ -101,5 +101,4 @@ yarn-debug.log*
 yarn-error.log*
 /**/node_modules
 /**/target
-
-/test-api/src/main/resources/config.yml
+/test-api/dependency-reduced-pom.xml
